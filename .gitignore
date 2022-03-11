@@ -1,1 +1,5 @@
 *.csv
+.ipynb_checkpoints/
+csv/
+node_modules/
+package-lock.json
