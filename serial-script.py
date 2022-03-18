@@ -4,7 +4,9 @@ import time
 from datetime import date,datetime
 import csv
 
-ser = serial.Serial('/dev/ttyACM0')
+# ser = serial.Serial('/dev/ttyACM0')
+ser = serial.Serial('/dev/cu.usbmodem1411')
+
 ser.flushInput()
 
 while True:
