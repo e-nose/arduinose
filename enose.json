@@ -55,7 +55,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ6",
+                    "title": "MQ7",
                     "units": "",
                     "value": "%4",
                     "widget": ""
@@ -69,7 +69,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ7",
+                    "title": "MQ8",
                     "units": "",
                     "value": "%5",
                     "widget": ""
@@ -83,7 +83,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ8",
+                    "title": "MQ9",
                     "units": "",
                     "value": "%6",
                     "widget": ""
@@ -97,23 +97,9 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ9",
-                    "units": "",
-                    "value": "%7",
-                    "widget": ""
-                },
-                {
-                    "alarm": 0,
-                    "fft": false,
-                    "fftSamples": 1024,
-                    "graph": false,
-                    "led": false,
-                    "log": false,
-                    "max": 0,
-                    "min": 0,
                     "title": "MQ135",
                     "units": "",
-                    "value": "%8",
+                    "value": "%7",
                     "widget": ""
                 }
             ],
