@@ -6,6 +6,8 @@ import csv
 
 ser = serial.Serial('/dev/ttyACM0')
 ser.flushInput()
+
+# add ~ 3 min buffer after truning on - heat up time
 i = 0
 while i < 601:
     if i == 120:
@@ -19,7 +21,7 @@ while i < 601:
         now= datetime.now()
         print(ser_bytes)
         with open(date.today().strftime("%b-%d-%Y"),"a") as f:
-            writer = csv.writer(f,delimiter=",")
+            writer = csv.writer(f,delimiter=",") 
             writer.writerow([('%02d:%02d.%d'%(now.minute,now.second,now.microsecond))[:-4],ser_bytes])
         i += 1
 

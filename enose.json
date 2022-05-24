@@ -13,7 +13,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ2",
+                    "title": "MQ2 (Methane, Butane, LPG)",
                     "units": "",
                     "value": "%1",
                     "widget": ""
@@ -27,7 +27,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ3",
+                    "title": "MQ3 (Alcohol, Ethanol)",
                     "units": "",
                     "value": "%2",
                     "widget": ""
@@ -41,7 +41,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ4",
+                    "title": "MQ4 (Methane, CNG Gas)",
                     "units": "",
                     "value": "%3",
                     "widget": ""
@@ -55,7 +55,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ7",
+                    "title": "MQ7 (Carbon Monoxide)",
                     "units": "",
                     "value": "%4",
                     "widget": ""
@@ -69,7 +69,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ8",
+                    "title": "MQ8 (Hydrogen Gas)",
                     "units": "",
                     "value": "%5",
                     "widget": ""
@@ -83,7 +83,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ9",
+                    "title": "MQ9 (Carbon Monoxide, flammable gases)",
                     "units": "",
                     "value": "%6",
                     "widget": ""
@@ -97,7 +97,7 @@
                     "log": false,
                     "max": 0,
                     "min": 0,
-                    "title": "MQ135",
+                    "title": "MQ135 (CO, Ammonia, Benzene, Alcohol)",
                     "units": "",
                     "value": "%7",
                     "widget": ""
