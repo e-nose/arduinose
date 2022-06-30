@@ -46,21 +46,21 @@ void loop()
   float hic = dht.computeHeatIndex(t, h, false);
 
   sensorValue2 = analogRead(A2);
-  sensorVoltage2 = sensorValue2 / 1024 * 5.0;
+  sensorVoltage2 = sensorValue2 / 1024 * 5.0 * 10;
   sensorValue3 = analogRead(A3);
-  sensorVoltage3 = sensorValue3 / 1024 * 5.0;
+  sensorVoltage3 = sensorValue3 / 1024 * 5.0 * 10;
   sensorValue4 = analogRead(A4);
-  sensorVoltage4 = sensorValue4 / 1024 * 5.0;
+  sensorVoltage4 = sensorValue4 / 1024 * 5.0 * 10;
   //  sensorValue6 = analogRead(A6);
-  //  sensorVoltage6 = sensorValue6 / 1024 * 5.0;
+  //  sensorVoltage6 = sensorValue6 / 1024 * 5.0 * 10;
   sensorValue7 = analogRead(A7);
-  sensorVoltage7 = sensorValue7 / 1024 * 5.0;
+  sensorVoltage7 = sensorValue7 / 1024 * 5.0 * 10;
   sensorValue8 = analogRead(A8);
-  sensorVoltage8 = sensorValue8 / 1024 * 5.0;
+  sensorVoltage8 = sensorValue8 / 1024 * 5.0 * 10;
   sensorValue9 = analogRead(A9);
-  sensorVoltage9 = sensorValue9 / 1024 * 5.0;
+  sensorVoltage9 = sensorValue9 / 1024 * 5.0 * 10;
   sensorValue135 = analogRead(A13);
-  sensorVoltage135 = sensorValue135 / 1024 * 5.0;
+  sensorVoltage135 = sensorValue135 / 1024 * 5.0 * 10;
   Serial.print("/*");
 
   Serial.print(sensorVoltage2);
