@@ -1,9 +1,16 @@
+#include "DHT.h"
+#define DHTPIN 53     // Digital pin connected to the DHT sensor
+#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
+
+DHT dht(DHTPIN, DHTTYPE);
+
 float sensorVoltage2;
 float sensorValue2;
 
 void setup()
 {
   Serial.begin(9600);
+  dht.begin();
 }
 
 void loop()
@@ -30,6 +37,14 @@ void loop()
   float sensorVoltage135;
   float sensorValue135;
 
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  float h = dht.readHumidity();
+  // Read temperature as Celsius (the default)
+  float t = dht.readTemperature();
+  // Compute heat index in Celsius (isFahreheit = false)
+  float hic = dht.computeHeatIndex(t, h, false);
+
   sensorValue2 = analogRead(A2);
   sensorVoltage2 = sensorValue2 / 1024 * 5.0;
   sensorValue3 = analogRead(A3);
@@ -50,6 +65,7 @@ void loop()
 
   Serial.print(sensorVoltage2);
   Serial.print(",");
+
   Serial.print(sensorVoltage3);
   Serial.print(",");
 
@@ -69,8 +85,27 @@ void loop()
   Serial.print(",");
 
   Serial.print(sensorVoltage135);
+  Serial.print(",");
+
+  Serial.print(t);
+  Serial.print(",");
+
+  Serial.print(h);
+  Serial.print(",");
+
+  Serial.print(hic);
+
   Serial.print("*/");
   Serial.print("\t");
 
   delay(500);
+
+  //  Serial.print(F("Humidity: "));
+  //  Serial.print(h);
+  //  Serial.print(F("%  Temperature: "));
+  //  Serial.print(t);
+  //  Serial.print(F("°C Heat index: "));
+  //  Serial.print(hic);
+  //  Serial.print(F("°C "));
+
 }
