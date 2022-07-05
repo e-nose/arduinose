@@ -4,18 +4,42 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 
+String command;
 float sensorVoltage2;
 float sensorValue2;
 
 void setup()
 {
+  
   Serial.begin(9600);
+  pinMode(23,OUTPUT);
+  pinMode(25,OUTPUT);
+  
   dht.begin();
 }
 
 void loop()
 {
-
+   if(Serial.available()){
+        command = Serial.readStringUntil('\n');
+         
+        if(command.equals("airin_on")){
+            digitalWrite(23,HIGH);
+        }
+        else if(command.equals("airin_off")){
+            digitalWrite(23,LOW);
+        }
+        else if(command.equals("airout_on")){
+            digitalWrite(25,HIGH);
+        }
+        else if(command.equals("airout_off")){
+            digitalWrite(25,LOW);
+        }
+        else{
+            Serial.println("Invalid command");
+        }
+    }
+  
   float sensorVoltage3;
   float sensorValue3;
 
@@ -36,7 +60,7 @@ void loop()
 
   float sensorVoltage135;
   float sensorValue135;
-
+  
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
   float h = dht.readHumidity();
@@ -61,7 +85,7 @@ void loop()
   sensorVoltage9 = sensorValue9 / 1024 * 5.0 * 10;
   sensorValue135 = analogRead(A13);
   sensorVoltage135 = sensorValue135 / 1024 * 5.0 * 10;
-  Serial.print("/*");
+ // Serial.print("/*");
 
   Serial.print(sensorVoltage2);
   Serial.print(",");
@@ -95,8 +119,8 @@ void loop()
 
   Serial.print(hic);
 
-  Serial.print("*/");
-  Serial.print("\t");
+  //Serial.print("*/");
+  Serial.println("\t");
 
   delay(500);
 
